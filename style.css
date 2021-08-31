@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 800px;
+  height: 800px;
+  border: 1px solid red;
+  margin: auto auto; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 500px;
+  height: 500px;
+  background-color: darkgray;
+  transform: skewX(25deg) skewY(25deg);
+  /* animation:rotate 5s infinite 0s; */
+  
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* 
+https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform
+https://css-tricks.com/almanac/properties/t/transform/
+  Anotacoes a respeito do transform
+
+  rotate()|-> gira o elemento em sentido horario se o valor for > 0
+          |-> gira em sentido anti-horario se o valor for < 0
+  rotateX()-> usa somente o eixo X para fazer a rotacao
+  rotateY()-> usa somente o eixo Y
+
+  skew() -> segundo o MDN nao deve ser usado. Sendo substituido por skewX
+  skewX()|-> ele 'estica' as laterais
+  skewY()|-> de acordo com o eixo
+
+
+*/
